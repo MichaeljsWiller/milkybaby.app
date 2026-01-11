@@ -17,7 +17,17 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body>
+<body class="home-page">
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Milky Baby</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
 
 <header class="hero">
   <div class="hero-content">
@@ -88,9 +98,17 @@
 
 <footer>
   <a href="/privacy.html">Privacy Policy</a>
-  <span>•</span>
-  <a href="/support.html">Support</a>
 </footer>
 
+  <script>
+    const path = window.location.pathname;
+    document.querySelectorAll(".top-nav a").forEach(link => {
+      const href = link.getAttribute("href");
+      if (path.endsWith(href)) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+</body>
 </body>
 </html>
