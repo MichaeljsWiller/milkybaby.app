@@ -1,0 +1,87 @@
+:root {
+  --pink: #FF9EFF;
+  --blue: #3EC7FF;
+  --text: #0f172a;
+  --muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui;
+  color: var(--text);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 6rem;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 480px;
+}
+
+.appstore-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+}
+
+.features {
+  padding: 4rem 6rem;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature p {
+  color: var(--muted);
+}
+
+.cta {
+  padding: 4rem 6rem;
+  text-align: center;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
