@@ -196,29 +196,28 @@ footer a {
 @media (max-width: 768px) {
 
   .top-nav {
-    padding: 0.75rem 1rem;
+    width: 100%;
   }
 
   .nav-inner {
-    flex-direction: column;
     align-items: center;
     gap: 0.75rem;
   }
 
-  .nav-logo {
-    font-size: 1.2rem;
-  }
-
   .nav-links {
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
   }
 
-  .nav-links a {
+    .nav-links a {
     font-size: 0.95rem;
     padding: 0.25rem 0;
+  }
+
+    .nav-logo {
+    font-size: 1.2rem;
   }
 }
 
@@ -255,13 +254,19 @@ footer a {
   }
 
   .hero-text {
+    order: 1;
     max-width: 100%;
   }
 
-  .hero-image img {
-    max-width: 85%;
-    height: auto;
+  .hero-image {
+    order: 2;
     margin-top: 2rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
   }
 }
 
@@ -271,4 +276,41 @@ footer a {
     padding: 0.85rem 1.25rem;
     font-size: 1rem;
   }
+    .content-page {
+    max-width: 100%;
+    padding: 2rem 1rem;
+    align-items: flex-start;
+  }
+
+  .content-page > * {
+    width: 100%;
+  }
+
+    .features,
+  .grid,
+  .columns,
+  .two-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
+
+@media (max-width: 768px) {
+
+  /* Global column enforcement */
+  section,
+  header,
+  footer,
+  main,
+  .container,
+  .hero,
+  .nav-inner,
+  .content-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
