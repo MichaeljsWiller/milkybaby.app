@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://michaeljswiller.github.io/milkybaby.app/sitemap.xml
